@@ -12,15 +12,11 @@ fibs = [1, 2]
 backwards = fibs[::-1]
 max_value = 4000000
 
-def sequence(fore, back):
-	while ( back[0] + back[1] ) < max_value:
+def sequence(fore,back):
+	while (back[0] + back[1]) < max_value:
 		new_number = back[0] + back[1]
 		fore.append(new_number)
-		back = fore[::-1]
-
-#	if back[0] > max_value:
-#		del back[0]
-#		fore = back[::-1]
+		back.insert(0, new_number)
 
 def sum(numbers):
 	total = 0
