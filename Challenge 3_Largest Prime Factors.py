@@ -197,7 +197,7 @@ def prime_factors(n):
         while n % d == 0: #this loops through a number for as many times that 2 is a prime factor before incrementing d and checking the next number
             factors.append(d)
             n /= d
-        d = d + 1
+        d = d + 1 #it works to increment by 1 because even numbers that would be factors are already taken care of by dividing by smaller prime numbers.
         if d*d > n: #this must relate to the relationship between a prime number and its square root
             if n > 1: factors.append(n)
             break
